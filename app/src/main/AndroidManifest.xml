@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.topmarket">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".androidWrapper.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:noHistory="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="false"
+        android:theme="@style/Theme.TOPMarket">
+        <activity android:name=".activity.SplashActivity"/>
+        <activity android:name=".activity.MarjoeiActivity" />
+        <activity
+            android:name=".activity.PortaxfifActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.FactorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ShopedDerailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ShopedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.detailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.shekatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PayPalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AddAdressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AdresschoiceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AuthActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.BasketActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ProductsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.subActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

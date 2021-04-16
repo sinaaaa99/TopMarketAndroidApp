@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/orange4"
+    android:orientation="vertical"
+    tools:context=".activity.AddAdressActivity">
+
+    <LinearLayout
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editTextText_titleAdress"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/edit_text_background"
+            android:ems="10"
+            android:hint="عنوان"
+            android:inputType="textPersonName"
+            android:paddingRight="5dp"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            tools:layout_editor_absoluteX="111dp"
+            tools:layout_editor_absoluteY="115dp" />
+
+        <EditText
+            android:id="@+id/editTextText_addAdresss"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/edit_text_background"
+            android:ems="10"
+            android:hint="آدرس"
+            android:inputType="textPersonName"
+            android:paddingRight="5dp"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            tools:layout_editor_absoluteX="93dp"
+            tools:layout_editor_absoluteY="268dp" />
+
+        <EditText
+            android:id="@+id/editTextText_codepost"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/edit_text_background"
+            android:ems="10"
+            android:hint="کدپستی (اختیاری)"
+            android:inputType="textPersonName"
+            android:paddingRight="5dp"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            tools:layout_editor_absoluteX="76dp"
+            tools:layout_editor_absoluteY="370dp" />
+
+        <Button
+            android:id="@+id/btn_AddAdress"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/btn_background"
+            android:text="اضافه کردن آدرس"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</ScrollView>

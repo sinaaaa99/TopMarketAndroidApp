@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.FactorActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".activity.FactorActivity">
+
+        <TextView
+            android:id="@+id/textView58"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:background="@color/orange4"
+            android:gravity="center"
+            android:text="نام خریدار:"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView59"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView59"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/orange4"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/textView58"
+            app:layout_constraintEnd_toStartOf="@+id/textView58"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView58" />
+
+        <TextView
+            android:id="@+id/textView60"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="موبایل:"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView61"
+            app:layout_constraintTop_toBottomOf="@+id/textView58" />
+
+        <TextView
+            android:id="@+id/textView61"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/textView60"
+            app:layout_constraintEnd_toStartOf="@+id/textView60"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView60" />
+
+        <TextView
+            android:id="@+id/textView62"
+            android:layout_width="0dp"
+            android:layout_height="140dp"
+            android:background="@color/orange4"
+            android:gravity="center"
+            android:text="آدرس:"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView63"
+            app:layout_constraintTop_toBottomOf="@+id/textView60" />
+
+        <TextView
+            android:id="@+id/textView63"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/orange4"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/textView62"
+            app:layout_constraintEnd_toStartOf="@+id/textView62"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView62" />
+
+        <TextView
+            android:id="@+id/textView64"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="شماره فاکتور:"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView65"
+            app:layout_constraintTop_toBottomOf="@+id/textView62" />
+
+        <TextView
+            android:id="@+id/textView65"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/textView64"
+            app:layout_constraintEnd_toStartOf="@+id/textView64"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView64" />
+
+        <TextView
+            android:id="@+id/textView74"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:background="@color/orange4"
+            android:gravity="center"
+            android:text="تاریخ:"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView75"
+            app:layout_constraintTop_toBottomOf="@+id/textView64" />
+
+        <TextView
+            android:id="@+id/textView75"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/orange4"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/textView74"
+            app:layout_constraintEnd_toStartOf="@+id/textView74"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView74" />
+
+        <TextView
+            android:id="@+id/textView76"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="قیمت کل:"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView77"
+            app:layout_constraintTop_toBottomOf="@+id/textView74" />
+
+        <TextView
+            android:id="@+id/textView77"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/textView76"
+            app:layout_constraintEnd_toStartOf="@+id/textView76"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView76" />
+
+        <TextView
+            android:id="@+id/textView78"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:background="@color/orange4"
+            android:gravity="center"
+            android:text="هزینه ارسال:"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView79"
+            app:layout_constraintTop_toBottomOf="@+id/textView76" />
+
+        <TextView
+            android:id="@+id/textView79"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/orange4"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/textView78"
+            app:layout_constraintEnd_toStartOf="@+id/textView78"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView78" />
+
+        <TextView
+            android:id="@+id/textview1234"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center|right"
+            android:paddingRight="3dp"
+            android:layout_margin="3dp"
+            android:text="لیست محصولات:"
+            android:textColor="@color/red"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView78" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewFactor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/backdetail"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview1234" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

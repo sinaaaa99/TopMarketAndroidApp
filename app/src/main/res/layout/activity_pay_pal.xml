@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.PayPalActivity">
+
+    <RadioGroup
+        android:id="@+id/radioGroup_pay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/backkharid"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/radio_payAdd"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layoutDirection="rtl"
+            android:padding="3dp"
+            android:text="پرداخت اعتباری"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:padding="3dp"
+            android:text="میزان اعتبار:"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textviewEtebarPay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:paddingLeft="3dp"
+            android:text="20000"
+            android:textColor="@color/red"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/radio_placAdd"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layoutDirection="rtl"
+            android:padding="3dp"
+            android:text="پرداخت در محل"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:drawableRight="@drawable/ic_baseline_date_range_24"
+        android:paddingRight="3dp"
+        android:text=" زمان تحویل"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup_pay" />
+
+    <Spinner
+        android:id="@+id/spinnerlistdate"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+    <RadioGroup
+        android:background="@color/backkharid"
+        android:id="@+id/radioGroup_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerlistdate">
+
+        <RadioButton
+            android:id="@+id/radiomorning"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layoutDirection="rtl"
+            android:padding="3dp"
+            android:text="ساعت 9 تا 14"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/radioevening"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layoutDirection="rtl"
+            android:padding="3dp"
+            android:text="ساعت 1 تا 21"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button_sabtAdddd"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_margin="4dp"
+        android:background="@drawable/btn_shaow"
+        android:text="ثبت نهایی خرید"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup_time"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

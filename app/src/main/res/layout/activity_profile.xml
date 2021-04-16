@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/orange4"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".activity.ProfileActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/topmarketlogo" />
+
+    <EditText
+        android:id="@+id/edit_name_profile"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/edit_text_background"
+        android:ems="10"
+        android:hint="نام"
+        android:inputType="textPersonName"
+        android:paddingRight="8dp"
+        tools:layout_editor_absoluteX="115dp"
+        tools:layout_editor_absoluteY="206dp" />
+
+    <EditText
+        android:id="@+id/edit_last_profile"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/edit_text_background"
+        android:ems="10"
+        android:hint="نام خانوادگی"
+        android:inputType="textPersonName"
+        android:paddingRight="8dp"
+        tools:layout_editor_absoluteX="115dp"
+        tools:layout_editor_absoluteY="337dp" />
+
+    <EditText
+        android:id="@+id/edit_email_profile"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/edit_text_background"
+        android:ems="10"
+        android:hint="ایمیل(اختیاری)"
+        android:inputType="textPersonName"
+        android:paddingRight="8dp"
+        tools:layout_editor_absoluteX="88dp"
+        tools:layout_editor_absoluteY="435dp" />
+
+    <Button
+        android:id="@+id/btnprofile"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/btn_background"
+        android:text="ثبت"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+</LinearLayout>
