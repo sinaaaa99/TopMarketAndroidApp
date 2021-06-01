@@ -10,10 +10,13 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.example.storeproma.DataClassLogin
+import com.example.topmarket.DataClass.DataClassError
 import com.example.topmarket.R
 import com.example.topmarket.etc.AlertDialogLoad
 import com.example.topmarket.net.ApiService
 import com.example.topmarket.net.ApiServiceLogin
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -82,14 +85,20 @@ class LoginActivity : AppCompatActivity() {
                             classdialog.stop()
 
 //                            Toast.makeText(this@LoginActivity, "success", Toast.LENGTH_LONG).show()
-                        } else {
-
+                        } else{
                             classdialog.stop()
 
-                            Toast.makeText(
-                                this@LoginActivity, "لطفا شماره تلفن صحیحی وارد کنید",
-                                Toast.LENGTH_SHORT
-                            ).show()
+                            val gson = Gson()
+                            val type = object : TypeToken<DataClassError>() {}.type
+                            val errorResponse: DataClassError? =
+                                gson.fromJson(response.errorBody()!!.charStream(), type)
+
+                            if (errorResponse != null) {
+                                Toast.makeText(
+                                    this@LoginActivity, errorResponse.message,
+                                    Toast.LENGTH_LONG
+                                ).show()
+                            }
                         }
                     }
 
