@@ -98,6 +98,11 @@ class ApiService() {
 
         ): Call<DataClassCheekDiscount>
 
+        @FormUrlEncoded
+        @Headers("Content-Type:application/x-www-form-urlencoded")
+        @POST("api/v1/clients/cart/number")
+        fun checkCartNumber(): Call<DataClassCartNumber>
+
 
         @FormUrlEncoded
         @Headers("Content-Type:application/x-www-form-urlencoded")
@@ -134,7 +139,7 @@ class ApiService() {
             @Body DataClassSherkatdis: DataClassSherkatdis
         ): Call<DataclassPayEtear>
 
-        //pay darb sherkat etebar without dis
+        //pay in place with credit without discount
         @Headers("Content-Type:application/json")
         @POST("api/v1/orders/create/withCredit")
         fun payEtebarShb(

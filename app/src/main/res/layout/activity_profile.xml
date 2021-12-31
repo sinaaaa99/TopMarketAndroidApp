@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/orange4"
+    android:background="@drawable/background_shape"
     android:gravity="center"
     android:orientation="vertical"
+    android:padding="12dp"
     tools:context=".activity.ProfileActivity">
 
     <ImageView
@@ -18,26 +19,26 @@
     <EditText
         android:id="@+id/edit_name_profile"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="65dp"
         android:layout_margin="5dp"
-        android:background="@drawable/edit_text_background"
+        android:background="@drawable/background_shape_with_green_blue_corner"
         android:ems="10"
-        android:hint="نام"
+        android:hint="@string/name"
         android:inputType="textPersonName"
-        android:paddingRight="8dp"
+        android:paddingRight="20dp"
         tools:layout_editor_absoluteX="115dp"
         tools:layout_editor_absoluteY="206dp" />
 
     <EditText
         android:id="@+id/edit_last_profile"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="65dp"
         android:layout_margin="5dp"
-        android:background="@drawable/edit_text_background"
+        android:background="@drawable/background_shape_with_green_blue_corner"
         android:ems="10"
-        android:hint="نام خانوادگی"
+        android:hint="@string/lastName"
         android:inputType="textPersonName"
-        android:paddingRight="8dp"
+        android:paddingRight="20dp"
         tools:layout_editor_absoluteX="115dp"
         tools:layout_editor_absoluteY="337dp" />
 
@@ -48,20 +49,22 @@
         android:layout_margin="5dp"
         android:background="@drawable/edit_text_background"
         android:ems="10"
-        android:hint="ایمیل(اختیاری)"
+        android:hint="@string/email"
         android:inputType="textPersonName"
         android:paddingRight="8dp"
         tools:layout_editor_absoluteX="88dp"
+        android:visibility="gone"
         tools:layout_editor_absoluteY="435dp" />
 
     <Button
         android:id="@+id/btnprofile"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="65dp"
         android:layout_margin="10dp"
-        android:background="@drawable/btn_background"
-        android:text="ثبت"
-        android:textColor="@color/white"
+        android:background="@drawable/btn_login_shape2"
+        android:translationZ="8dp"
+        android:text="@string/save"
+        android:textColor="#ffe600"
         android:textSize="20sp"
         android:textStyle="bold" />
 </LinearLayout>

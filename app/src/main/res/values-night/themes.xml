@@ -12,5 +12,15 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="android:textViewStyle">@style/fontfarsi</item>
+        <item name="buttonStyle">@style/btnfont</item>
+    </style>
+
+    <style name="fontfarsi" parent="android:Widget.TextView">
+        <item name="fontFamily">@font/b_yekan</item>
+    </style>
+
+    <style name="btnfont" parent="android:Widget.Button">
+        <item name="fontFamily">@font/b_yekan</item>
     </style>
 </resources>

@@ -40,7 +40,7 @@ class profileFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        val classdialog = AlertDialogLoad(activity!!)
+        val classdialog = AlertDialogLoad(requireActivity())
         classdialog.start()
 
         ApiService().getRetrofit().getProfile()
@@ -53,7 +53,7 @@ class profileFragment : Fragment() {
                     if (data != null) {
 
                         textView_nameP.text = data.firstName
-                        textView_lastP.text = data.lastName
+                        textView_lastP.text = "عزیز"
                         textView_emailP.text = data.email
                         textView_invaitP.text = data.invitationCode
                         textView_tellP.text = data.mobileNumber

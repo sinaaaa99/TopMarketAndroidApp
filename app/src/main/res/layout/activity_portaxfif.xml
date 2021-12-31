@@ -5,5 +5,5 @@
     android:id="@+id/recyclerviewPorAll"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backdetail"
+    android:background="@drawable/background_shape"
     tools:context=".activity.PortaxfifActivity" />

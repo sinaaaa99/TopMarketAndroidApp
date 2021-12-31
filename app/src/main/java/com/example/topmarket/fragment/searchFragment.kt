@@ -6,15 +6,21 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import androidx.core.widget.addTextChangedListener
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.topmarket.DataClass.DataClassSearch
 import com.example.topmarket.R
 import com.example.topmarket.activity.detailActivity
 import com.example.topmarket.adapter.Adapter_search
+import com.example.topmarket.databinding.FragmentSearchBinding
 import com.example.topmarket.etc.AlertDialogLoad
+import com.example.topmarket.mvvm.viewmodel.MainViewModel
 import com.example.topmarket.net.ApiService
 import kotlinx.android.synthetic.main.fragment_search.*
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.MainScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import org.koin.dsl.module.applicationContext
 import retrofit2.Call
 import retrofit2.Callback
@@ -22,28 +28,50 @@ import retrofit2.Response
 
 class searchFragment : Fragment(), Adapter_search.searchsend {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-        }
-    }
+    lateinit var mainViewModel: MainViewModel
+    lateinit var adapterSearch: Adapter_search
+    lateinit var binding: FragmentSearchBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_search, container, false)
-    }
+    ): View {
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+        binding = FragmentSearchBinding.inflate(inflater, container, false)
 
-        val classdialog = AlertDialogLoad(activity!!)
+        adapterSearch = Adapter_search(this)
 
-        recyclerviewSearch.layoutManager = LinearLayoutManager(activity)
+//        val classdialog = AlertDialogLoad(requireActivity())
 
-        imageView_search.setOnClickListener {
+        mainViewModel = ViewModelProvider(this)[MainViewModel::class.java]
+
+        binding.recyclerviewSearch.adapter = adapterSearch
+        binding.recyclerviewSearch.layoutManager = LinearLayoutManager(activity)
+
+
+        var job: Job? = null
+        binding.editTextSearch.addTextChangedListener {
+            job?.cancel()
+            job = MainScope().launch {
+                delay(500L)
+
+                it.let {
+                    if (it.toString().isNotEmpty()) {
+                        mainViewModel.searchProducts(it.toString())
+                            .observe(viewLifecycleOwner, { data ->
+                                if (data != null) {
+                                    adapterSearch.dataclass.submitList(data.data)
+
+                                }
+
+                            })
+                    }
+                }
+            }
+        }
+
+
+        /*imageView_search.setOnClickListener {
 
 
             if (editText_search.text.isEmpty()) {
@@ -86,10 +114,13 @@ class searchFragment : Fragment(), Adapter_search.searchsend {
                         ).show()
                     }
                 })
-        }
+        }*/
 
 
+        // Inflate the layout for this fragment
+        return binding.root
     }
+
 
     override fun onclick(
         name: String,

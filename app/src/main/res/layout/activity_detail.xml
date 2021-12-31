@@ -12,12 +12,14 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.9"
+        android:background="@drawable/background_shape"
         tools:context=".activity.detailActivity">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="500dp"
-            android:padding="8dp"
+            android:padding="12dp"
+            android:background="@drawable/background_shape"
             tools:context=".activity.detailActivity">
 
             <View
@@ -25,7 +27,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
                 android:layout_marginTop="2dp"
-                android:background="#eceff1"
+                android:background="@drawable/shape_green_blue_color_fill_reverse"
                 app:layout_constraintEnd_toEndOf="@+id/textView95"
                 app:layout_constraintStart_toStartOf="@+id/textView97"
                 app:layout_constraintTop_toBottomOf="@+id/textView95" />
@@ -36,7 +38,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:text="توضیحات:"
+                android:text=""
                 android:textColor="@color/black"
                 android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="@+id/view5"
@@ -48,10 +50,11 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:background="@drawable/detail_shape"
+                android:background="@drawable/background_shape_white"
+                android:translationZ="8dp"
                 android:gravity="right"
                 android:padding="8dp"
-                android:textColor="@color/black"
+                android:textColor="@android:color/darker_gray"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/textview1000"
@@ -62,10 +65,14 @@
                 android:id="@+id/imageView_D_img"
                 android:layout_width="0dp"
                 android:layout_height="170dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/background_shape_white"
+                android:translationZ="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:srcCompat="@tools:sample/avatars" />
+
 
             <TextView
                 android:id="@+id/textView25"
@@ -87,7 +94,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
                 android:layout_marginTop="2dp"
-                android:background="#eceff1"
+                android:background="@drawable/shape_green_blue_color_fill"
                 app:layout_constraintEnd_toEndOf="@+id/textView25"
                 app:layout_constraintStart_toStartOf="@+id/textView25"
                 app:layout_constraintTop_toBottomOf="@+id/textView25" />
@@ -236,7 +243,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_weight="0.02"
-        android:background="#eceff1"
+        android:background="#ffffff"
         android:padding="5dp">
 
         <Button
@@ -244,10 +251,10 @@
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_margin="3dp"
-            android:background="@drawable/btn_khraid"
+            android:background="@drawable/btn_login_shape2"
             android:padding="8dp"
             android:text="افزودن به سبد خرید"
-            android:textColor="@color/white"
+            android:textColor="#ffe600"
             android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"

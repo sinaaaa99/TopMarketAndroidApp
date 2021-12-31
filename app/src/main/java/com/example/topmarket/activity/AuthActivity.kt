@@ -79,7 +79,7 @@ class AuthActivity : AppCompatActivity() {
         }
 
         btn_backlogin.setOnClickListener {
-            startActivity(Intent(this, LoginActivity::class.java))
+            startActivity(Intent(this, LoginnActivity::class.java))
             finish()
         }
     }

@@ -2,6 +2,7 @@ package com.example.topmarket.adapter
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Paint
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -33,22 +34,26 @@ class AdapterAlltaxfif(
         val name = itemview.textView_prud_name
         val marked = itemview.customtextview_prud_mark
         val mony = itemview.textView_prud_mony
-        val persent = itemview.textView_prud_present
+        val persent = itemview.txt_percent
         val btn_add = itemview.button_prud_add
-        val btn_mosh = itemview.button_Moshahede
+
+        //        val btn_mosh = itemview.button_Moshahede
         val spinr = itemview.spinner_quantiti
+//        val layoutroott = itemview.findViewById<Button>(R.id.cons)
 
         //invisables
         val btn_mojod = itemview.button_mojodkon
         val txt_mojod = itemview.textViewEtmam
+        val out_of_stack_image = itemview.out_of_stack_image
 
         fun binding(position: Int) {
 
             Picasso.get().load(dataclass.data[position].iconLink).into(image)
             name.text = dataclass.data[position].name
-            marked.text = dataclass.data[position].price.toString()
-            mony.text = dataclass.data[position].priceWithDiscount.toString()
-            persent.text = dataclass.data[position].discountPercent.toString()
+            marked.text = dataclass.data[position].price.toString() + " تومان "
+            marked.paintFlags = marked.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
+            mony.text = dataclass.data[position].priceWithDiscount.toString() + " تومان "
+            persent.text = " % " + dataclass.data[position].discountPercent.toString()
 
 //            listener.getsize(dataclass.data.size)
 
@@ -92,7 +97,7 @@ class AdapterAlltaxfif(
 //                listener.onclick(products.productUid,1)
             }
 
-            btn_mosh.setOnClickListener {
+            image.setOnClickListener {
                 val intent = Intent(context, detailActivity::class.java)
                 intent.putExtra("image", dataclass.data[position].iconLink)
                 intent.putExtra("name", dataclass.data[position].name)
@@ -106,8 +111,7 @@ class AdapterAlltaxfif(
 
             val pru_quan = dataclass.data[position].quantity
             if (pru_quan == 0) {
-                btn_mojod.visibility = View.VISIBLE
-                txt_mojod.visibility = View.VISIBLE
+                out_of_stack_image.visibility = View.VISIBLE
 
                 btn_add.visibility = View.GONE
                 spinr.visibility = View.GONE
@@ -117,6 +121,7 @@ class AdapterAlltaxfif(
 
                 btn_mojod.visibility = View.GONE
                 txt_mojod.visibility = View.GONE
+                out_of_stack_image.visibility = View.GONE
             }
 
             btn_mojod.setOnClickListener {

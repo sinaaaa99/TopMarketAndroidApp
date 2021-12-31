@@ -38,15 +38,16 @@ class AdresschoiceActivity : AppCompatActivity() {
 
         withdelivary = sharedPreferences.getBoolean("anbar", true)
         if (!withdelivary) {
-            constarct_anbar.visibility = View.GONE
+//            constarct_anbar.visibility = View.GONE
         }
 
-        btn_addnewadress.setOnClickListener {
+        floatingActionButton2.setOnClickListener {
             startActivity(Intent(this, AddAdressActivity::class.java))
+            finish()
         }
-        button_nextPay.setOnClickListener {
+        /*button_nextPay.setOnClickListener {
             startActivity(Intent(this, shekatActivity::class.java))
-        }
+        }*/
 
         recyclerviewlistdata.layoutManager = LinearLayoutManager(this)
 

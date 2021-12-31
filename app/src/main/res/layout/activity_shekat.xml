@@ -4,15 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_shape"
     android:orientation="vertical"
     tools:context=".activity.shekatActivity">
 
     <RadioGroup
-        android:background="@color/backkharid"
         android:id="@+id/radioGroup3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="15dp"
         android:padding="8dp"
+        android:translationZ="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -23,29 +25,29 @@
             android:layout_height="50dp"
             android:layoutDirection="rtl"
             android:padding="3dp"
-            android:text="پرداخت اعتباری"
-            android:textSize="20sp" />
+            android:text="@string/payCredit"
+            android:drawableRight="@drawable/credit_shop"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textView188"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="right"
-            android:padding="3dp"
-            android:text="میزان اعتبار:"
-            android:textColor="@color/black"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            android:padding="8dp"
+            android:text="@string/credit"
+            android:textColor="#636467"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textview_mizanESh"
-            android:layout_width="match_parent"
+            android:layout_width="148dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:paddingLeft="3dp"
-            android:text="20000"
-            android:textColor="@color/red"
-            android:textSize="24sp" />
+            android:text="@string/_20000"
+            android:textColor="@color/green2"
+            android:textSize="18sp" />
 
         <RadioButton
             android:id="@+id/radio_paySh_M"
@@ -53,20 +55,22 @@
             android:layout_height="50dp"
             android:layoutDirection="rtl"
             android:padding="3dp"
-            android:text="پرداخت در محل"
+            android:text="@string/payInPlace"
+            android:drawableRight="@drawable/pay_in_place"
             android:textColor="@color/black"
             android:textSize="20sp" />
     </RadioGroup>
 
     <Button
-        android:layout_margin="4dp"
         android:id="@+id/btnSh_nahaii"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@drawable/btn_shaow"
-        android:text="نهایی کردن خرید"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:layout_margin="4dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="55dp"
+        android:background="@drawable/btn_login_shape2"
+        android:text="@string/finilizeOrder"
+        android:textColor="#ffe600"
+        android:textSize="24sp" />
 
 </LinearLayout>

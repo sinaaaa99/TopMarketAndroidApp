@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:focusable="true"
+    android:background="@drawable/background_shape"
     android:focusableInTouchMode="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -12,14 +13,29 @@
         android:layout_height="wrap_content"
         tools:context=".activity.BasketActivity">
 
+        <ImageView
+            android:id="@+id/img_empty_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/empty_shopping_cart" />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewBasket"
+            android:backgroundTint="@color/white"
+            android:layout_margin="8dp"
+            android:translationZ="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/backdetail"
+            android:background="@drawable/background_shape"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
             app:layout_constraintDimensionRatio="2:3"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,6 +44,10 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:orientation="vertical"
+            android:background="@drawable/background_shape_white"
+            android:translationZ="8dp"
+            android:layout_margin="8dp"
+            android:padding="8dp"
             app:layout_constraintBottom_toTopOf="@+id/btn_finalSabt"
             app:layout_constraintDimensionRatio="3:2"
             app:layout_constraintEnd_toEndOf="parent"
@@ -43,7 +63,7 @@
                 android:layout_marginTop="4dp"
                 android:gravity="center"
                 android:paddingRight="3dp"
-                android:text="قیمت بدون تخفیف"
+                android:text="جمع کل قبل از تخفیف"
                 android:textColor="@color/red"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -84,7 +104,7 @@
                 android:layout_height="0dp"
                 android:gravity="center"
                 android:paddingRight="3dp"
-                android:text="قیمت با تخفیف"
+                android:text="@string/priceWithDiscount"
                 android:textColor="@color/green"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -125,7 +145,7 @@
                 android:layout_height="0dp"
                 android:gravity="center"
                 android:paddingRight="3dp"
-                android:text="هزینه ارسال"
+                android:text="@string/deliveryPrice"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -166,7 +186,7 @@
                 android:layout_height="0dp"
                 android:gravity="center"
                 android:paddingRight="3dp"
-                android:text="سود شما از این خرید"
+                android:text="@string/profit"
                 android:textColor="@color/green"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -207,7 +227,7 @@
                 android:layout_height="0dp"
                 android:gravity="center"
                 android:paddingRight="3dp"
-                android:text="قیمت قابل پرداخت"
+                android:text="@string/payable_price"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -258,10 +278,10 @@
 
                 <ImageView
                     android:id="@+id/Img_Dis"
-                    android:layout_width="wrap_content"
+                    android:layout_width="40dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.2"
-                    android:src="@drawable/ic_baseline_check_box_24" />
+                    android:src="@drawable/ok" />
 
                 <EditText
                     android:id="@+id/Edit_Dis"
@@ -269,20 +289,24 @@
                     android:layout_height="match_parent"
                     android:layout_weight="0.8"
                     android:ems="10"
+                    android:translationZ="8dp"
+                    android:background="@drawable/background_shape_white"
                     android:gravity="center"
                     android:hint="کد تخفیف"
                     android:inputType="textShortMessage" />
 
             </LinearLayout>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <Button
             android:id="@+id/btn_finalSabt"
             android:layout_width="0dp"
             android:layout_height="50dp"
-            android:background="@color/green"
-            android:text="ثبت نهایی سفارش"
-            android:textColor="@color/white"
+            android:translationZ="8dp"
+            android:background="@drawable/btn_login_shape2"
+            android:text="@string/order"
+            android:textColor="#ffe600"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"

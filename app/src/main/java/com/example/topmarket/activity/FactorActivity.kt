@@ -35,7 +35,10 @@ class FactorActivity : AppCompatActivity() {
                         textView65.text = data.factorNumber.toString()
                         textView75.text = data.creationDate.toString()
                         textView77.text = data.totalPriceWithDiscount.toString()
-                        textView79.text = data.deliveryPrice.toString()
+                        if(data.deliveryPrice == 0)
+                            textView79.text = "رایگان"
+                        else
+                            textView79.text = data.deliveryPrice.toString()
 
                         recyclerViewFactor.adapter = Adapter_Factor(data)
 

@@ -9,12 +9,13 @@ import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.Toast
-import com.example.topmarket.DataClass.*
+import com.example.topmarket.DataClass.DataClassDaytime
+import com.example.topmarket.DataClass.DataClassReqBuyB
+import com.example.topmarket.DataClass.DataClassRequestBuy
+import com.example.topmarket.DataClass.DataclassPayEtear
 import com.example.topmarket.R
 import com.example.topmarket.adapter.AdapterTimeSet
 import com.example.topmarket.net.ApiService
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.activity_pay_pal.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -57,6 +58,7 @@ class PayPalActivity : AppCompatActivity(), AdapterTimeSet.listener1 {
             when (checkedId) {
                 R.id.radiomorning -> time = 0
                 R.id.radioevening -> time = 1
+                R.id.radiofory -> time = 2
             }
         }
 
@@ -101,19 +103,6 @@ class PayPalActivity : AppCompatActivity(), AdapterTimeSet.listener1 {
                                                 MainActivity::class.java
                                             )
                                         )
-                                    } else {
-
-                                        val gson = Gson()
-                                        val type = object : TypeToken<DataClassError>() {}.type
-                                        val errorResponse: DataClassError? =
-                                            gson.fromJson(response.errorBody()!!.charStream(), type)
-
-                                        if (errorResponse != null) {
-                                            Toast.makeText(
-                                                this@PayPalActivity, errorResponse.message,
-                                                Toast.LENGTH_LONG
-                                            ).show()
-                                        }
                                     }
 
                                 }
@@ -122,11 +111,7 @@ class PayPalActivity : AppCompatActivity(), AdapterTimeSet.listener1 {
                                     call: Call<DataclassPayEtear>,
                                     t: Throwable
                                 ) {
-                                    Toast.makeText(
-                                        this@PayPalActivity,
-                                        "لطفا اتصال خود به اینترنت را چک کنید",
-                                        Toast.LENGTH_SHORT
-                                    ).show()
+
                                 }
                             })
                     }
@@ -156,19 +141,6 @@ class PayPalActivity : AppCompatActivity(), AdapterTimeSet.listener1 {
                                                 MainActivity::class.java
                                             )
                                         )
-                                    } else {
-
-                                        val gson = Gson()
-                                        val type = object : TypeToken<DataClassError>() {}.type
-                                        val errorResponse: DataClassError? =
-                                            gson.fromJson(response.errorBody()!!.charStream(), type)
-
-                                        if (errorResponse != null) {
-                                            Toast.makeText(
-                                                this@PayPalActivity, errorResponse.message,
-                                                Toast.LENGTH_LONG
-                                            ).show()
-                                        }
                                     }
                                 }
 
@@ -222,19 +194,6 @@ class PayPalActivity : AppCompatActivity(), AdapterTimeSet.listener1 {
                                                 MainActivity::class.java
                                             )
                                         )
-                                    } else {
-
-                                        val gson = Gson()
-                                        val type = object : TypeToken<DataClassError>() {}.type
-                                        val errorResponse: DataClassError? =
-                                            gson.fromJson(response.errorBody()!!.charStream(), type)
-
-                                        if (errorResponse != null) {
-                                            Toast.makeText(
-                                                this@PayPalActivity, errorResponse.message,
-                                                Toast.LENGTH_LONG
-                                            ).show()
-                                        }
                                     }
 
                                 }
@@ -243,11 +202,7 @@ class PayPalActivity : AppCompatActivity(), AdapterTimeSet.listener1 {
                                     call: Call<DataclassPayEtear>,
                                     t: Throwable
                                 ) {
-                                    Toast.makeText(
-                                        this@PayPalActivity,
-                                        "لطفا اتصال خود به اینترنت را چک کنید",
-                                        Toast.LENGTH_SHORT
-                                    ).show()
+                                    Log.d("pay", "bad:" + t.message.toString())
                                 }
                             })
 
@@ -280,31 +235,15 @@ class PayPalActivity : AppCompatActivity(), AdapterTimeSet.listener1 {
                                                 MainActivity::class.java
                                             )
                                         )
-                                    } else {
+                                    } else Log.d("kamshansi", dayfromNow.toString() + "nashod")
 
-                                        val gson = Gson()
-                                        val type = object : TypeToken<DataClassError>() {}.type
-                                        val errorResponse: DataClassError? =
-                                            gson.fromJson(response.errorBody()!!.charStream(), type)
-
-                                        if (errorResponse != null) {
-                                            Toast.makeText(
-                                                this@PayPalActivity, errorResponse.message,
-                                                Toast.LENGTH_LONG
-                                            ).show()
-                                        }
-                                    }
                                 }
 
                                 override fun onFailure(
                                     call: Call<DataclassPayEtear>,
                                     t: Throwable
                                 ) {
-                                    Toast.makeText(
-                                        this@PayPalActivity,
-                                        "لطفا اتصال خود به اینترنت را چک کنید",
-                                        Toast.LENGTH_SHORT
-                                    ).show()
+                                    Log.d("kamshansi", "bad:" + t.message.toString())
                                 }
                             })
 

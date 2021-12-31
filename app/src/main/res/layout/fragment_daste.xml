@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_shape"
     tools:context=".fragment.DasteFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RecyclerViewCategory"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        tools:ignore="SpeakableTextPresentCheck"
         tools:listitem="@layout/category_item" />
 
 </LinearLayout>

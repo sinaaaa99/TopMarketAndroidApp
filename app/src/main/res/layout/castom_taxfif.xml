@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/layouttaxfifha"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_margin="3dp"
-    android:background="@drawable/taxfif_shape"
+    android:layout_height="350dp"
+    android:layout_margin="5dp"
+    android:background="@drawable/background_shape_white"
+    android:translationZ="8dp"
     android:padding="5dp">
 
     <ImageView
@@ -27,37 +28,11 @@
         android:textColor="@color/red"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/textView29"
-        app:layout_constraintEnd_toStartOf="@+id/textView29"
+        app:layout_constraintBottom_toTopOf="@+id/textView_taxfif_dis"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/imageView_taxfif"
-        app:layout_constraintTop_toTopOf="@+id/textView29" />
-
-    <TextView
-        android:id="@+id/textView29"
-        android:layout_width="0dp"
-        android:layout_height="30dp"
-        android:gravity="center"
-        android:text="قیمت اصلی:"
-        android:textColor="@color/black"
-        android:textSize="10sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageView_taxfif"
-        app:layout_constraintStart_toEndOf="@+id/textView_taxfif_price"
-        app:layout_constraintTop_toBottomOf="@+id/textView_taxfif_name"
-        tools:layout_editor_absoluteY="265dp" />
-
-    <TextView
-        android:id="@+id/textView30"
-        android:layout_width="0dp"
-        android:layout_height="30dp"
-        android:gravity="center"
-        android:text="قیمت با تخفیف:"
-        android:textColor="@color/black"
-        android:textSize="10sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageView_taxfif"
-        app:layout_constraintStart_toEndOf="@+id/textView_taxfif_dis"
-        app:layout_constraintTop_toBottomOf="@+id/textView29" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_taxfif_name" />
 
     <TextView
         android:id="@+id/textView_taxfif_dis"
@@ -67,20 +42,20 @@
         android:textColor="@color/green"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/textView30"
-        app:layout_constraintEnd_toStartOf="@+id/textView30"
-        app:layout_constraintStart_toStartOf="@+id/imageView_taxfif"
-        app:layout_constraintTop_toTopOf="@+id/textView30" />
+        app:layout_constraintBottom_toTopOf="@+id/textView83"
+        app:layout_constraintEnd_toEndOf="@+id/textView_taxfif_price"
+        app:layout_constraintStart_toStartOf="@+id/textView_taxfif_price"
+        app:layout_constraintTop_toBottomOf="@+id/textView_taxfif_price" />
 
     <TextView
         android:id="@+id/textView_taxfif_name"
         android:layout_width="0dp"
-        android:layout_height="50dp"
+        android:layout_height="0dp"
         android:gravity="right"
         android:textColor="@color/black"
         android:textSize="10sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView29"
+        app:layout_constraintBottom_toTopOf="@+id/textView_taxfif_price"
         app:layout_constraintEnd_toEndOf="@+id/imageView_taxfif"
         app:layout_constraintStart_toStartOf="@+id/imageView_taxfif"
         app:layout_constraintTop_toBottomOf="@+id/imageView_taxfif" />
@@ -88,16 +63,16 @@
     <TextView
         android:id="@+id/textView83"
         android:layout_width="0dp"
-        android:layout_height="30dp"
+        android:layout_height="0dp"
         android:gravity="center"
         android:text="درصد تخفیف:"
         android:textColor="@color/black"
         android:textSize="10sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textView30"
+        app:layout_constraintEnd_toEndOf="@+id/textView_taxfif_price"
         app:layout_constraintStart_toEndOf="@+id/textView84"
-        app:layout_constraintTop_toBottomOf="@+id/textView30" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_taxfif_dis" />
 
     <TextView
         android:id="@+id/textView84"

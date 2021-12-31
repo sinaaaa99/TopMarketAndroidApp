@@ -21,6 +21,9 @@ class Adapter_listShoped(
         val date = itemview.tx_date
         val price = itemview.tx_price
         val status = itemview.tx_status
+        val btn_delivered = itemview.btn_delivered
+        val btn_ordered = itemview.btn_ordered
+        val btn_returned = itemview.btn_returned
 
         //button
         val btn_detaill = itemview.btn_11
@@ -31,6 +34,20 @@ class Adapter_listShoped(
             date.text = dataclass.orderList[position].creationDate
             price.text = dataclass.orderList[position].totalPrice.toString()
             status.text = dataclass.orderList[position].orderStatusPersianName
+
+            if(status.equals("تحویل شده")){
+                btn_delivered.visibility = View.VISIBLE
+                btn_ordered.visibility = View.INVISIBLE
+                btn_returned.visibility = View.INVISIBLE
+            }else if(status.equals("پرداخت موفق") || status.equals("سفارش پرداخت در محل")){
+                btn_delivered.visibility = View.INVISIBLE
+                btn_ordered.visibility = View.VISIBLE
+                btn_returned.visibility = View.INVISIBLE
+            }else{
+                btn_delivered.visibility = View.INVISIBLE
+                btn_ordered.visibility = View.INVISIBLE
+                btn_returned.visibility = View.VISIBLE
+            }
 
             btn_detaill.setOnClickListener {
 

@@ -4,112 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_shape_white"
     android:orientation="vertical"
     tools:context=".activity.AdresschoiceActivity">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constarct_anbar"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="@color/backdetail">
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:gravity="center"
-            android:text="تحویل درب انبار"
-            android:textColor="@color/black"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/textView11"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:gravity="center"
-            android:text="در صورت انتخاب تحویل درب انبار هزینه ارسال رایگان خواهد شد"
-            android:textColor="@color/black"
-            android:textSize="13sp"
-            android:textStyle="normal"
-            app:layout_constraintBottom_toTopOf="@+id/button_nextPay"
-            app:layout_constraintEnd_toEndOf="@+id/textView2"
-            app:layout_constraintStart_toStartOf="@+id/textView2"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-        <Button
-            android:id="@+id/button_nextPay"
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_margin="5dp"
-            android:background="@drawable/btn_shaow"
-            android:text="انتخاب"
-            android:textColor="@color/white"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/textView11"
-            app:layout_constraintStart_toStartOf="@+id/textView11" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="2dp">
 
-        <TextView
-            android:id="@+id/textView15"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:padding="3dp"
-            android:text="لیست آدرس های شما:"
-            android:textColor="@color/black"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/btn_addnewadress"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/btn_addnewadress"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="3dp"
-            android:background="@color/black"
-            android:padding="3dp"
-            android:text="+ افزودن آدرس جدید"
-            android:textColor="@color/white"
-            android:textSize="17sp"
-            app:layout_constraintBottom_toBottomOf="@+id/textView15"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView15" />
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerviewlistdata"
-            android:background="@color/backdetail"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="8dp"
+            android:background="@drawable/background_shape"
+            android:translationZ="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/floatingActionButton2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView32" />
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/textView32"
-            android:layout_width="0dp"
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton2"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:textColor="@color/black"
-            android:textSize="14sp"
-            android:text="توجه: هزینه ارسال 7000 تومان میباشد(برای خریدهای بالای 150000 تومان رایگان میباشد)"
-            app:layout_constraintEnd_toEndOf="@+id/textView15"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_baseline_add_24"
+            tools:ignore="VectorDrawableCompat" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

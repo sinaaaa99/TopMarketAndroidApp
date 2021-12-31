@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="220dp"
-    android:background="@drawable/detail_shape"
-    android:layout_margin="5dp">
+    android:background="@drawable/background_shape_white"
+    android:translationZ="8dp"
+    android:layout_margin="8dp">
 
     <TextView
         android:id="@+id/txt_titleA"
@@ -41,6 +42,7 @@
         android:paddingLeft="3dp"
         android:textColor="@color/black"
         android:textSize="22sp"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/btn_adressA"
         app:layout_constraintEnd_toStartOf="@+id/textView90"
         app:layout_constraintStart_toStartOf="@+id/txt_adressA"
@@ -49,12 +51,12 @@
     <Button
         android:id="@+id/btn_adressA"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/btn_shaow"
+        android:layout_height="50dp"
+        android:background="@drawable/btn_login_shape2"
         android:text="انتخاب"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        android:textStyle="bold"
+        android:textColor="#ffe600"
+        android:layout_marginBottom="8dp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,7 +68,8 @@
         android:gravity="right"
         android:padding="5dp"
         android:text="آدرس:"
-        android:textColor="@color/black"
+        android:drawableRight="@drawable/address"
+        android:textColor="#636467"
         android:textSize="14sp"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
@@ -75,14 +78,15 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_titleA" />
 
     <TextView
+        android:id="@+id/textView90"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
         android:gravity="right"
         android:padding="5dp"
         android:text="کدپستی:"
         android:textColor="@color/black"
         android:textSize="14sp"
-        android:id="@+id/textView90"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/btn_adressA"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_adressA" />

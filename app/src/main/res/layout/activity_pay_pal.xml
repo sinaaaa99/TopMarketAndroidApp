@@ -4,13 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_shape"
     tools:context=".activity.PayPalActivity">
 
     <RadioGroup
         android:id="@+id/radioGroup_pay"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/backkharid"
+        android:background="@drawable/background_shape_white"
+        android:translationZ="8dp"
+        android:layout_margin="12dp"
         android:padding="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +25,8 @@
             android:layout_height="50dp"
             android:layoutDirection="rtl"
             android:padding="3dp"
-            android:text="پرداخت اعتباری"
+            android:text="@string/creditPay"
+            android:drawableRight="@drawable/credit_shop"
             android:textSize="20sp" />
 
         <TextView
@@ -30,9 +34,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="right"
+            android:layout_marginRight="15dp"
             android:padding="3dp"
-            android:text="میزان اعتبار:"
-            android:textColor="@color/black"
+            android:text="@string/creditValue"
+            android:textColor="#636467"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -42,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:paddingLeft="3dp"
-            android:text="20000"
+            android:text="@string/_20000"
             android:textColor="@color/red"
             android:textSize="24sp" />
 
@@ -52,7 +57,8 @@
             android:layout_height="50dp"
             android:layoutDirection="rtl"
             android:padding="3dp"
-            android:text="پرداخت در محل"
+            android:drawableRight="@drawable/pay_in_place"
+            android:text="@string/payInPlace"
             android:textColor="@color/black"
             android:textSize="20sp" />
     </RadioGroup>
@@ -62,10 +68,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:drawableRight="@drawable/ic_baseline_date_range_24"
-        android:paddingRight="3dp"
-        android:text=" زمان تحویل"
-        android:textColor="@color/black"
+        android:drawableRight="@drawable/delivery_time"
+        android:paddingRight="15dp"
+        android:text="@string/deliveryTime"
+        android:textColor="#636467"
+        android:gravity="center|right"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,15 +90,26 @@
         app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
     <RadioGroup
-        android:background="@color/backkharid"
         android:id="@+id/radioGroup_time"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:padding="8dp"
+        android:background="@drawable/background_shape_white"
+        android:translationZ="8dp"
+        android:layout_margin="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinnerlistdate">
+
+        <RadioButton
+            android:id="@+id/radiofory"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layoutDirection="rtl"
+            android:padding="3dp"
+            android:text="ارسال فوری"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
 
         <RadioButton
             android:id="@+id/radiomorning"
@@ -99,7 +117,7 @@
             android:layout_height="50dp"
             android:layoutDirection="rtl"
             android:padding="3dp"
-            android:text="ساعت 9 تا 14"
+            android:text="@string/_9_14"
             android:textColor="@color/black"
             android:textSize="20sp" />
 
@@ -109,7 +127,7 @@
             android:layout_height="50dp"
             android:layoutDirection="rtl"
             android:padding="3dp"
-            android:text="ساعت 1 تا 21"
+            android:text="@string/_15_21"
             android:textColor="@color/black"
             android:textSize="20sp" />
     </RadioGroup>
@@ -119,16 +137,17 @@
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_margin="4dp"
-        android:background="@drawable/btn_shaow"
-        android:text="ثبت نهایی خرید"
-        android:textColor="@color/white"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/btn_login_shape2"
+        android:text="@string/submitOrder"
+        android:textColor="#ffe600"
         android:textSize="20sp"
-        android:textStyle="bold"
+        android:translationZ="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup_time"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.050" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

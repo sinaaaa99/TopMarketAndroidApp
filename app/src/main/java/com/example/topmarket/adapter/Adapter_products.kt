@@ -2,6 +2,7 @@ package com.example.topmarket.adapter
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Paint
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -53,16 +54,19 @@ class Adapter_products(
     inner class viewHolder(itemview: View) : RecyclerView.ViewHolder(itemview) {
         val image = itemview.findViewById<ImageView>(R.id.imageView_prud)
         val name = itemview.findViewById<TextView>(R.id.textView_prud_name)
-        val marked = itemview.findViewById<TextView>(R.id.customtextview_prud_mark)
+        var marked = itemview.findViewById<TextView>(R.id.customtextview_prud_mark)
         val mony = itemview.findViewById<TextView>(R.id.textView_prud_mony)
-        val persent = itemview.findViewById<TextView>(R.id.textView_prud_present)
+        val persent = itemview.findViewById<TextView>(R.id.txt_percent)
         val btn_add = itemview.findViewById<Button>(R.id.button_prud_add)
-        val btn_mosh = itemview.button_Moshahede
+
+        //        val layoutroott = itemview.findViewById<Button>(R.id.cons)
+//        val btn_mosh = itemview.button_Moshahede
         val spinr = itemview.spinner_quantiti
 
         //invisables
         val btn_mojod = itemview.button_mojodkon
         val txt_mojod = itemview.textViewEtmam
+        val out_of_stack_image = itemview.out_of_stack_image
 
         fun setdata(products: DataClassproducts.Data) {
 
@@ -70,9 +74,11 @@ class Adapter_products(
                 .into(image)
 
             name.text = products.name
-            marked.text = products.price.toString()
-            mony.text = products.priceWithDiscount.toString()
-            persent.text = products.discountPercent.toString()
+            marked.text = products.price.toString() + " تومان "
+            marked.paintFlags = marked.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
+            mony.text = products.priceWithDiscount.toString() + " تومان "
+//            mony.paintFlags = mony.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
+            persent.text = " % " + products.discountPercent.toString()
 
             spinr.adapter =
                 ArrayAdapter(context, android.R.layout.simple_list_item_1, listquantiti)
@@ -110,7 +116,7 @@ class Adapter_products(
 //                listener.onclick(products.productUid,1)
             }
 
-            btn_mosh.setOnClickListener {
+            image.setOnClickListener {
                 val intent = Intent(context, detailActivity::class.java)
                 intent.putExtra("image", products.iconLink)
                 intent.putExtra("name", products.name)
@@ -125,8 +131,7 @@ class Adapter_products(
 
             val pru_quan = products.quantity
             if (pru_quan == 0) {
-                btn_mojod.visibility = View.VISIBLE
-                txt_mojod.visibility = View.VISIBLE
+                out_of_stack_image.visibility = View.VISIBLE
 
                 btn_add.visibility = View.GONE
                 spinr.visibility = View.GONE
@@ -136,6 +141,7 @@ class Adapter_products(
 
                 btn_mojod.visibility = View.GONE
                 txt_mojod.visibility = View.GONE
+                out_of_stack_image.visibility = View.GONE
             }
 
             btn_mojod.setOnClickListener {

@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/alertdialogwait"
+    android:background="@android:color/transparent"
+    android:translationZ="12dp"
+    android:layout_margin="10dp"
     android:padding="15dp">
 
     <TextView
@@ -15,6 +17,7 @@
         android:text="لطفا چند لحظه صبر کنید..."
         android:textColor="@color/black"
         android:textSize="18sp"
+        android:visibility="gone"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/progressBar2"

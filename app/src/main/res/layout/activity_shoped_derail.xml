@@ -19,7 +19,7 @@
             android:background="@color/orange4"
             android:gravity="right|center"
             android:paddingRight="3dp"
-            android:text="مشخصات گیرنده:"
+            android:text="@string/customerName"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"

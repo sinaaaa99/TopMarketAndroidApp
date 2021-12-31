@@ -1,6 +1,7 @@
 package com.example.topmarket.adapter
 
 import android.content.Context
+import android.graphics.Paint
 import android.text.SpannableString
 import android.text.Spanned
 import android.text.style.StrikethroughSpan
@@ -37,8 +38,9 @@ class Adapter_taxfif(val dataclass: DataclassTaxfif, val layouttclick: layoutcli
                 .load(dataclass.data[position].iconLink.toString())
                 .into(image)*/
 
-            price.text = dataclass.data[position].price.toString()
-            dicount.text = dataclass.data[position].priceWithDiscount.toString()
+            price.text = dataclass.data[position].price.toString() + " تومان "
+            price.paintFlags = price.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
+            dicount.text = dataclass.data[position].priceWithDiscount.toString() + " تومان "
             name.text = dataclass.data[position].name
             persentDis.text = dataclass.data[position].discountPercent.toString()
 

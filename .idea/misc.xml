@@ -1,6 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/topMarket/TopMarketAndroidApp/app/src/main/res/drawable/custom_discount_shape.xml" value="0.2203125" />
+        <entry key="..\:/topMarket/TopMarketAndroidApp/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.2203125" />
+        <entry key="..\:/topMarket/TopMarketAndroidApp/app/src/main/res/drawable/txt_background_price.xml" value="0.2203125" />
+        <entry key="..\:/topMarket/TopMarketAndroidApp/app/src/main/res/layout-v28/castom_img.xml" value="0.1" />
+        <entry key="..\:/topMarket/TopMarketAndroidApp/app/src/main/res/layout-v28/custom_dialogload.xml" value="0.20416666666666666" />
+        <entry key="..\:/topMarket/TopMarketAndroidApp/app/src/main/res/layout/activity_add_adress.xml" value="0.1" />
+        <entry key="..\:/topMarket/TopMarketAndroidApp/app/src/main/res/layout/activity_adresschoice.xml" value="0.16" />
+        <entry key="..\:/topMarket/TopMarketAndroidApp/app/src/main/res/layout/activity_auth.xml" value="0.1" />
+        <entry key="..\:/topMarket/TopMarketAndroidApp/app/src/main/res/layout/activity_detail.xml" value="0.1" />
+        <entry key="..\:/topMarket/TopMarketAndroidApp/app/src/main/res/layout/activity_factor.xml" value="0.20416666666666666" />
+        <entry key="..\:/topMarket/TopMarketAndroidApp/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
+        <entry key="..\:/topMarket/TopMarketAndroidApp/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/topMarket/TopMarketAndroidApp/app/src/main/res/layout/activity_main2.xml" value="0.20416666666666666" />
+        <entry key="..\:/topMarket/TopMarketAndroidApp/app/src/main/res/layout/activity_marjoe.xml" value="0.20416666666666666" />
+        <entry key="..\:/topMarket/TopMarketAndroidApp/app/src/main/res/layout/activity_marjoei.xml" value="0.20416666666666666" />
+        <entry key="..\:/topMarket/TopMarketAndroidApp/app/src/main/res/layout/activity_pay_pal.xml" value="0.20416666666666666" />
+        <entry key="..\:/topMarket/TopMarketAndroidApp/app/src/main/res/layout/activity_portaxfif.xml" value="0.20416666666666666" />
+        <entry key="..\:/topMarket/TopMarketAndroidApp/app/src/main/res/layout/activity_products.xml" value="0.1" />
+        <entry key="..\:/topMarket/TopMarketAndroidApp/app/src/main/res/layout/activity_products22.xml" value="0.22" />
+        <entry key="..\:/topMarket/TopMarketAndroidApp/app/src/main/res/layout/activity_profile.xml" value="0.20416666666666666" />
+        <entry key="..\:/topMarket/TopMarketAndroidApp/app/src/main/res/layout/activity_shekat.xml" value="0.20416666666666666" />
+        <entry key="..\:/topMarket/TopMarketAndroidApp/app/src/main/res/layout/activity_shoped_derail.xml" value="0.20416666666666666" />
+        <entry key="..\:/topMarket/TopMarketAndroidApp/app/src/main/res/layout/activity_splash.xml" value="0.20416666666666666" />
+        <entry key="..\:/topMarket/TopMarketAndroidApp/app/src/main/res/layout/castom_basketbuy.xml" value="0.20416666666666666" />
+        <entry key="..\:/topMarket/TopMarketAndroidApp/app/src/main/res/layout/castom_img.xml" value="0.20416666666666666" />
+        <entry key="..\:/topMarket/TopMarketAndroidApp/app/src/main/res/layout/castom_search.xml" value="0.20416666666666666" />
+        <entry key="..\:/topMarket/TopMarketAndroidApp/app/src/main/res/layout/castom_taxfif.xml" value="0.25" />
+        <entry key="..\:/topMarket/TopMarketAndroidApp/app/src/main/res/layout/custom_dialogload.xml" value="0.20416666666666666" />
+        <entry key="..\:/topMarket/TopMarketAndroidApp/app/src/main/res/layout/fragment_daste.xml" value="0.20416666666666666" />
+        <entry key="..\:/topMarket/TopMarketAndroidApp/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/topMarket/TopMarketAndroidApp/app/src/main/res/layout/fragment_profile.xml" value="0.22" />
+        <entry key="..\:/topMarket/TopMarketAndroidApp/app/src/main/res/layout/fragment_search.xml" value="0.22" />
+        <entry key="..\:/topMarket/TopMarketAndroidApp/app/src/main/res/layout/musicplayer.xml" value="0.20416666666666666" />
+        <entry key="..\:/topMarket/TopMarketAndroidApp/app/src/main/res/layout/products_view.xml" value="0.33" />
+        <entry key="..\:/topMarket/TopMarketAndroidApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2203125" />
+        <entry key="..\:/topMarket/TopMarketAndroidApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.11510416666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

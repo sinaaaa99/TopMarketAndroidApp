@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.topmarket.DataClass.DataclassBasket
 import com.example.topmarket.R
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.activity_products22.view.*
 import kotlinx.android.synthetic.main.castom_basketbuy.view.*
 import org.koin.standalone.KoinComponent
 import org.koin.standalone.inject
@@ -33,6 +34,7 @@ class recycler_Basket(
         val EditText = itemview.EditTextQuantitti
         val trash = itemview.imageView3
 
+
         fun setdata(pos: Int) {
 
             picasoo.load(dataclass.itemList[pos].iconLink)
@@ -49,7 +51,6 @@ class recycler_Basket(
                     EditText.text.toString().toInt()
                 )
                 notifyDataSetChanged()
-
             }
             trash.setOnClickListener {
                 changer.trashclick(

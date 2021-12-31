@@ -38,12 +38,14 @@ class AddAdressActivity : AppCompatActivity() {
                     if (data != null) {
                         Toast.makeText(this@AddAdressActivity, "آدرس اضافه شد", Toast.LENGTH_SHORT)
                             .show()
+
                         startActivity(
                             Intent(
                                 this@AddAdressActivity,
                                 AdresschoiceActivity::class.java
                             )
                         )
+                        finish()
                     }
 
                 }

@@ -53,7 +53,7 @@ class HomeFragment : Fragment(), Adapter_taxfif.layoutclick {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        val classdialog = AlertDialogLoad(activity!!)
+        val classdialog = AlertDialogLoad(requireActivity())
         classdialog.start()
 
         presenter.onCreate()

@@ -17,10 +17,10 @@
     </style>
 
     <style name="fontfarsi" parent="android:Widget.TextView">
-        <item name="fontFamily">@font/gandom</item>
+        <item name="fontFamily">@font/b_yekan</item>
     </style>
 
     <style name="btnfont" parent="android:Widget.Button">
-        <item name="fontFamily">@font/gandom</item>
+        <item name="fontFamily">@font/b_yekan</item>
     </style>
 </resources>

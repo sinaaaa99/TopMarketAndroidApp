@@ -14,6 +14,8 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
+            android:background="#c2d1e5"
+            android:translationZ="4dp"
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
@@ -24,9 +26,22 @@
                 android:layout_marginEnd="5dp"
                 android:layout_marginRight="5dp"
                 android:padding="10dp"
-                android:src="@drawable/ic_baseline_add_shopping"
+                android:src="@drawable/image_add_shopping"
                 android:layout_toStartOf="@+id/imgmenu"
                 android:layout_toLeftOf="@+id/imgmenu" />
+
+            <TextView
+                android:id="@+id/txt_cart_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:background="@drawable/circle_cart_number_background"
+                android:textColor="@color/white"
+                android:text="@string/_12"
+                android:textSize="12sp"
+                android:visibility="invisible"
+                android:layout_toStartOf="@+id/imgmenu"
+                android:layout_toLeftOf="@+id/imgmenu"/>
 
             <ImageView
                 android:id="@+id/imgmenu"
@@ -39,13 +54,15 @@
                 android:layout_alignParentRight="true" />
 
             <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="65dp"
+                android:layout_width="70dp"
                 android:scaleType="fitXY"
                 android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
                 android:layout_alignParentStart="true"
                 android:src="@drawable/topmarketlogo"
                 tools:ignore="RtlHardcoded"
                 android:layout_alignParentLeft="true" />
+
         </RelativeLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -53,7 +70,8 @@
         android:id="@+id/main_fram"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="0.95">
+        android:layout_weight="0.95"
+        android:background="@drawable/background_shape">
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -62,8 +80,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.05"
-        android:background="@color/orange1"
+        android:translationZ="4dp"
+        android:background="#c2d1e5"
         app:itemIconTint="@color/icon_menu_nav"
-        app:itemTextColor="@color/icon_menu_nav"
+        app:itemTextColor="@color/text_menu_nav"
         app:menu="@menu/menu_nav_main" />
 </LinearLayout>
